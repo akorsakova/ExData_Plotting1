@@ -1,4 +1,4 @@
-  ##R Script for Plot 1
+  ##R Script for Plot 2
   
   ##Set working directory and load complete dataset
   setwd("~/DataScienceCertificiation/ExData_Plotting1")
@@ -15,8 +15,8 @@
   rm(allData)
   
   #Create plot
-  with(myData, hist(Global_active_power, main = "Global Active Power", col = "red", xlab = "Global Active Power (killowatts)"))
+  with(myData, plot(dateAndTime, Global_active_power, type = "l", xlab = "", ylab="Global Active Power (kilowatts)"))
   
   #Save plot file to PNG
-  dev.copy(png, file = "plot1.png", height = 480, width = 480) 
+  dev.copy(png, file = "plot2.png", height = 480, width = 480) 
   dev.off()

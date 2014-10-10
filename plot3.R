@@ -1,4 +1,4 @@
-  ##R Script for Plot 1
+  ##R Script for Plot 3
   
   ##Set working directory and load complete dataset
   setwd("~/DataScienceCertificiation/ExData_Plotting1")
@@ -14,9 +14,15 @@
   rm(dateAndTime)
   rm(allData)
   
-  #Create plot
-  with(myData, hist(Global_active_power, main = "Global Active Power", col = "red", xlab = "Global Active Power (killowatts)"))
+  #Create plot and save directly to the PNG file (avoids ledgend resizing)
+  png(file = "plot3.png")
+  plot(myData$dateAndTime, myData$Sub_metering_1, type = "l", xlab = "", ylab="Energy sub metering")
+ 
+  #add additional lines
+  lines(myData$dateAndTime, myData$Sub_metering_2,  col="red")
+  lines(myData$dateAndTime, myData$Sub_metering_3,  col="blue")
   
-  #Save plot file to PNG
-  dev.copy(png, file = "plot1.png", height = 480, width = 480) 
+  #add legend
+  legend("topright", legend = c("Sub_metering_1","Sub_metering_2", "Sub_metering_3"),lty=c(1,1),col=c("black","blue","red"))
+  
   dev.off()

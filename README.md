@@ -1,3 +1,11 @@
+##Instructions for running plottig scripts
+
+To run the plotting scripts the following steps must be taken:
+1. Download the four scripts (plot1.R, plot2.R, plot3.R, and plot4.R)
+2. Download the raw data using the below instructions and unzip to a ../RawData folder
+3. Run each script
+
+
 ## Introduction
 
 This assignment uses data from
