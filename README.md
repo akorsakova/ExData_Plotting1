@@ -6,7 +6,7 @@ To run the plotting scripts the following steps must be taken:
 <li>1. Download the four scripts (plot1.R, plot2.R, plot3.R, and plot4.R)</li>
 <li>2. Download the raw data using the below instructions and unzip to a ../RawData folder</li>
 <li>3. Run each script</li>
-
+</ol>
 
 ## Introduction
 
